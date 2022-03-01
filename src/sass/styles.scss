@@ -1,0 +1,57 @@
+@use 'globals';
+@use 'variables';
+
+body {
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+#page-container {
+    margin: 0 0.75rem;
+}
+
+/* Header */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.2rem 0;
+    a {
+        h3 {
+            font: 200 14px 'Crimson Pro', serif;
+            color: #fff;
+            padding: 8px;
+            border: 1px solid #fff;
+        }
+        span {
+            display: block;
+            width: 1.78125rem;
+            height: 0.125rem;
+            background-color: var(--text);
+            &:not(:last-child) {
+                margin-bottom: 0.4125rem;
+            }
+        }
+    }
+}
+
+main {
+    h1 {
+        font: 500 2.25rem 'Lora', serif;
+    }
+    h1 + p {
+        font: 400 0.875rem/1.066875 'Montserrat', sans-serif;
+        width: 15.625rem;
+    }
+    p + p{
+        font: 700 0.875rem 'Montserrat', sans-serif;
+    }
+    section {
+        position: relative;
+        & > img {
+            margin: 0 auto;
+            width: 21.9375rem;
+        }
+    } 
+    
+}
