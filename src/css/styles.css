@@ -1,80 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap");
-html {
+:root {
+  --colour: #fff;
+  --bg: #181719;
+  --lora: "Lora", serif;
+  --montserrat: "Montserrat", sans-serif;
+  --crimson: "Crimson Pro", serif;
+}
+
+* {
   font-size: 100%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 body {
-  margin: 0;
-  padding: 0;
-  line-height: 1.3;
-}
-
-a {
-  text-decoration: none;
-}
-
-:root {
-  --text: #fff;
-  --bg: #181719;
-}
-
-body {
-  color: var(--text);
   background-color: var(--bg);
+  color: var(--colour);
 }
 
 #page-container {
-  margin: 0 0.75rem;
+  margin: 1.1875rem 0.75rem;
 }
 
-/* Header */
-nav {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0.2rem 0;
+  margin-bottom: 2.375rem;
 }
-nav a h3 {
-  font: 200 14px "Crimson Pro", serif;
-  color: #fff;
+header #logo {
+  font: 200 14px var(--crimson);
   padding: 8px;
   border: 1px solid #fff;
 }
-nav a span {
+header .burger-menu span {
   display: block;
-  width: 1.78125rem;
-  height: 0.125rem;
-  background-color: var(--text);
+  width: 28.5px;
+  height: 2px;
+  background-color: var(--colour);
 }
-nav a span:not(:last-child) {
-  margin-bottom: 0.4125rem;
+header .burger-menu span:not(:last-child) {
+  margin-bottom: 5px;
 }
 
-main h1 {
-  font: 500 2.25rem "Lora", serif;
+.hero-text h1 {
+  font: 500 2.25rem var(--lora);
+  margin-bottom: 1.5625rem;
 }
-main h1 + p {
-  font: 400 0.875rem/1.066875 "Montserrat", sans-serif;
-  width: 15.625rem;
+.hero-text p {
+  font: 400 0.875rem var(--montserrat);
+  margin-bottom: 1.5625rem;
 }
-main p + p {
-  font: 700 0.875rem "Montserrat", sans-serif;
+.hero-text p + p {
+  font-weight: 700;
+  margin-bottom: 2.3125rem;
 }
-main section {
+
+.hero-image {
   position: relative;
 }
-main section > img {
-  margin: 0 auto;
-  width: 21.9375rem;
+.hero-image #photo1 {
+  width: 100%;
+}
+.hero-image .profile-box {
+  width: 18.75rem;
+}
+.hero-image .profile-box .profile-header img,
+.hero-image .profile-box .profile-header div {
+  display: inline-block;
+}
+.hero-image .profile-box .profile-header img {
+  width: 2.2875rem;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=styles.css.map */

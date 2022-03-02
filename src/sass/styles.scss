@@ -1,57 +1,76 @@
 @use 'globals';
-@use 'variables';
 
 body {
-    color: var(--text);
     background-color: var(--bg);
+    color: var(--colour);
 }
 
 #page-container {
-    margin: 0 0.75rem;
+    margin: 1.1875rem 0.75rem;
 }
 
-/* Header */
-nav {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.2rem 0;
-    a {
-        h3 {
-            font: 200 14px 'Crimson Pro', serif;
-            color: #fff;
-            padding: 8px;
-            border: 1px solid #fff;
-        }
-        span {
-            display: block;
-            width: 1.78125rem;
-            height: 0.125rem;
-            background-color: var(--text);
-            &:not(:last-child) {
-                margin-bottom: 0.4125rem;
-            }
+    margin-bottom: 2.375rem;
+
+    #logo {
+        font: 200 14px var(--crimson);
+        padding: 8px;
+        border: 1px solid #fff;
+    }
+
+    .burger-menu span {
+        display: block;
+        width: 28.5px;
+        height: 2px;
+        background-color: var(--colour);
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
         }
     }
 }
 
-main {
+.hero-text {
     h1 {
-        font: 500 2.25rem 'Lora', serif;
+        font: 500 2.25rem var(--lora);
+        margin-bottom: 1.5625rem;
     }
-    h1 + p {
-        font: 400 0.875rem/1.066875 'Montserrat', sans-serif;
-        width: 15.625rem;
-    }
-    p + p{
-        font: 700 0.875rem 'Montserrat', sans-serif;
-    }
-    section {
-        position: relative;
-        & > img {
-            margin: 0 auto;
-            width: 21.9375rem;
+
+    p {
+        font: 400 0.875rem var(--montserrat);
+        margin-bottom: 1.5625rem;
+
+        &+p {
+            font-weight: 700;
+            margin-bottom: 2.3125rem;
         }
-    } 
-    
+    }
+}
+
+.hero-image {
+    position: relative;
+
+    #photo1 {
+        width: 100%;
+    }
+
+    .profile-box {
+        width: 18.75rem;
+
+        .profile-header {
+
+            img,
+            div {
+                display: inline-block;
+            }
+
+            img {
+                width: 2.2875rem;
+                border-radius: 50%;
+            }
+        }
+    }
 }
