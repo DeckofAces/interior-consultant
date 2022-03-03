@@ -7,6 +7,8 @@ body {
 
 #page-container {
     margin: 1.1875rem 0.75rem;
+    min-height: 100vh;
+    position: relative;
 }
 
 header {
@@ -58,19 +60,56 @@ header {
     }
 
     .profile-box {
-        width: 18.75rem;
+        // width: 18.75rem;
+        width: 82%;
+        box-shadow: 0 4px 4px rgba(0, 0, 0.25);
+        padding: 0 4% 5%;
+        position: absolute;
+        bottom: -30%;
+        right: 3%;
+        background-color: var(--bg);
 
         .profile-header {
+            margin: 1.0625rem 0;
+            display: flex;
+            align-items: center;
 
-            img,
-            div {
-                display: inline-block;
+            .profile-img {
+                margin-right: 0.875rem;
+                padding: 0.5rem;
             }
 
             img {
                 width: 2.2875rem;
                 border-radius: 50%;
             }
+
+            h3 {
+                font: 500 0.75rem var(--montserrat);
+            }
+
+            p {
+                font: 500 0.625rem var(--montserrat);
+                color: #828282;
+            }
         }
+
+        div+p {
+            font: 700 1.125rem var(--lora);
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 1%;
+    font: 500 0.875rem var(--montserrat);
+    color: #a9a9a9;
+    display: flex;
+    justify-content: space-around;
+
+    span {
+        font-weight: 700;
     }
 }

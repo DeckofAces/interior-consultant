@@ -23,6 +23,8 @@ body {
 
 #page-container {
   margin: 1.1875rem 0.75rem;
+  min-height: 100vh;
+  position: relative;
 }
 
 header {
@@ -66,15 +68,49 @@ header .burger-menu span:not(:last-child) {
   width: 100%;
 }
 .hero-image .profile-box {
-  width: 18.75rem;
+  width: 82%;
+  box-shadow: 0 4px 4px black;
+  padding: 0 4% 5%;
+  position: absolute;
+  bottom: -30%;
+  right: 3%;
+  background-color: var(--bg);
 }
-.hero-image .profile-box .profile-header img,
-.hero-image .profile-box .profile-header div {
-  display: inline-block;
+.hero-image .profile-box .profile-header {
+  margin: 1.0625rem 0;
+  display: flex;
+  align-items: center;
+}
+.hero-image .profile-box .profile-header .profile-img {
+  margin-right: 0.875rem;
+  padding: 0.5rem;
 }
 .hero-image .profile-box .profile-header img {
   width: 2.2875rem;
   border-radius: 50%;
+}
+.hero-image .profile-box .profile-header h3 {
+  font: 500 0.75rem var(--montserrat);
+}
+.hero-image .profile-box .profile-header p {
+  font: 500 0.625rem var(--montserrat);
+  color: #828282;
+}
+.hero-image .profile-box div + p {
+  font: 700 1.125rem var(--lora);
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 1%;
+  font: 500 0.875rem var(--montserrat);
+  color: #a9a9a9;
+  display: flex;
+  justify-content: space-around;
+}
+footer span {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=styles.css.map */
