@@ -1,3 +1,5 @@
+@use 'mixins';
+
 html {
     font-size: 100%;
     box-sizing: border-box;
@@ -6,6 +8,16 @@ html {
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--colour);
+    margin: 1.1875rem 0.75rem;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
 }
 
 .flex {
@@ -25,5 +37,20 @@ html {
 
     &-jc-sb {
         justify-content: space-between;
+    }
+}
+
+// Visibility
+.hide-for-mobile {
+    // hide for tablet and mobile devices
+    @include mixins.breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    // hide for desktop viewport widths
+    @include mixins.breakpoint-up(large) {
+        display: none;
     }
 }
