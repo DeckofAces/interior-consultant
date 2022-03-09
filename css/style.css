@@ -56,6 +56,9 @@ a, a:visited, a:hover {
   }
 }
 
+.header {
+  margin-bottom: 2.375rem;
+}
 .header__logo {
   font: 200 14px var(--crimson);
   color: #fff;
@@ -99,6 +102,60 @@ a, a:visited, a:hover {
   border-bottom: 2px solid var(--colour);
 }
 
+.main .heroText {
+  margin-bottom: 2.3125rem;
+}
+.main .heroText__header {
+  font: 500 2.25rem var(--lora);
+  margin-bottom: 1.5625rem;
+}
+.main .heroText__text {
+  font: 400 0.875rem var(--montserrat);
+  width: 65%;
+  margin-bottom: 1.5625rem;
+}
+.main .heroText__text + p {
+  font: 700 0.875rem var(--montserrat);
+}
+.main .heroImage {
+  position: relative;
+}
+.main .heroImage__img {
+  width: 100%;
+}
+.main .heroImage__profile {
+  background-color: var(--bg);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 0.8125rem 1.4175rem 1.5625rem;
+  width: 75%;
+  max-width: 410px;
+  position: absolute;
+  bottom: -5rem;
+  right: 2vw;
+}
+.main .heroImage__profile__img {
+  width: 2.3rem;
+  border-radius: 50%;
+  margin-right: 0.875rem;
+}
+.main .heroImage__profile__header {
+  margin-bottom: 1.375rem;
+}
+.main .heroImage__profile__header__text {
+  color: var(--colour);
+}
+.main .heroImage__profile__header__text h1 {
+  font: 500 0.75rem var(--montserrat);
+}
+.main .heroImage__profile__header__text p {
+  font: 500 0.625rem var(--montserrat);
+  color: #828282;
+}
+.main .heroImage__profile__header + p {
+  font: 700 1.125rem var(--lora);
+  width: 75%;
+}
+
 /* Overlay Styles */
 #overlay {
   position: fixed;
@@ -131,6 +188,23 @@ a, a:visited, a:hover {
   font-weight: 700;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--colour);
+}
+
+#page-container {
+  min-height: 100%;
+  position: relative;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  margin-top: 10rem;
+  margin-bottom: 1rem;
+  color: #a9a9a9;
+  font: 500 0.875rem var(--montserrat);
+}
+.footer span {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */

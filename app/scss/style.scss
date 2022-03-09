@@ -1,7 +1,7 @@
 @use 'variables';
 @use 'globals';
 @use 'header';
-
+@use 'main';
 
 /* Overlay Styles */
 #overlay {
@@ -43,5 +43,24 @@
                 border-bottom: 2px solid var(--colour);
             }
         }
+    }
+}
+
+#page-container {
+    min-height: 100%;
+    position: relative;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    // bottom: 0;
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+
+    color: #a9a9a9;
+    font: 500 0.875rem var(--montserrat);
+    span {
+        font-weight: 700;
     }
 }
