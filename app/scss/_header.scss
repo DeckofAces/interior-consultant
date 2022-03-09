@@ -33,6 +33,7 @@
                 transform: rotate(-45deg);
             }
         }
+        z-index: 1; //So the hamburger menu can show in front of other positioned elements on the page
     }
 
     &__links {
