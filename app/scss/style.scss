@@ -1,5 +1,7 @@
 @use 'variables';
 @use 'globals';
+@use 'mixins';
+
 @use 'overlay';
 @use 'header';
 @use 'main';
@@ -12,14 +14,71 @@
 
 .footer {
     width: 100%;
-    position: absolute;
-    bottom: 1vh;
-    margin-top: 10rem;
-    margin-bottom: 1rem;
+    // position: absolute;
+    bottom: 0.2vh;
+    // margin-top: auto;
+
+
+
+    // margin-bottom: 20rem;
 
     color: #a9a9a9;
     font: 500 0.875rem var(--montserrat);
+
     span {
         font-weight: 700;
+    }
+}
+
+/* Desktop Styles */
+@include mixins.breakpoint-up(large) {
+    body {
+        width: 90vw;
+        margin: 2.625rem auto;
+    }
+
+    .main {
+        margin-top: 10.6875rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .heroText {
+            width: 40%;
+            &__header {
+                font-size: 3rem;
+                padding: 0;
+            }
+
+            &__text {
+                width: 80%;
+                font-size: 1.5rem;
+
+                &+p {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+
+        .heroImage {
+            width: 60%;
+            &__profile {
+                &__header {
+                    &__text {
+                        h1 {
+                            font-size: 0.875rem;
+                        }
+
+                        p {
+                            font-size: 0.75rem;
+                        }
+                    }
+
+                    &+p {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
     }
 }

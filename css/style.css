@@ -21,7 +21,7 @@ html {
 body {
   background-color: var(--bg);
   color: var(--colour);
-  margin: 1.1875rem 0.75rem;
+  margin: 1.1875rem 0.75rem 0;
 }
 
 a, a:visited, a:hover {
@@ -138,6 +138,9 @@ a, a:visited, a:hover {
   border-bottom: 2px solid var(--colour);
 }
 
+.main {
+  margin-bottom: 20rem;
+}
 .main .heroText {
   margin-bottom: 2.3125rem;
 }
@@ -199,15 +202,53 @@ a, a:visited, a:hover {
 
 .footer {
   width: 100%;
-  position: absolute;
-  bottom: 1vh;
-  margin-top: 10rem;
-  margin-bottom: 1rem;
+  bottom: 0.2vh;
   color: #a9a9a9;
   font: 500 0.875rem var(--montserrat);
 }
 .footer span {
   font-weight: 700;
+}
+
+/* Desktop Styles */
+@media (min-width: 64em) {
+  body {
+    width: 90vw;
+    margin: 2.625rem auto;
+  }
+
+  .main {
+    margin-top: 10.6875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main .heroText {
+    width: 40%;
+  }
+  .main .heroText__header {
+    font-size: 3rem;
+    padding: 0;
+  }
+  .main .heroText__text {
+    width: 80%;
+    font-size: 1.5rem;
+  }
+  .main .heroText__text + p {
+    font-size: 1.125rem;
+  }
+  .main .heroImage {
+    width: 60%;
+  }
+  .main .heroImage__profile__header__text h1 {
+    font-size: 0.875rem;
+  }
+  .main .heroImage__profile__header__text p {
+    font-size: 0.75rem;
+  }
+  .main .heroImage__profile__header + p {
+    font-size: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
